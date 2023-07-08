@@ -20,3 +20,13 @@ function showTabs() {
   }
 }
 showTabs();
+
+const accordionList = document.querySelectorAll(".accordion__header");
+const accordionContent = document.querySelectorAll(".accordion__content");
+
+accordionList.forEach((accordion) => {
+  accordion.addEventListener("click", () => {
+    accordion.classList.toggle("is-open");
+    accordion.nextElementSibling.classList.toggle("is-open");
+  });
+});
