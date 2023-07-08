@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #dff9fb;
+}
+
+.title {
+  font-size: 48px;
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  color: #130f40;
+}
+
+.text {
+  color: #535c68;
+  font-weight: bold;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: bold;
+  color: #35311e;
+}
+
+.header {
+  background-color: #686de0;
+  padding: 1vw 7vw;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f6e58d;
+  padding: 10px;
+}
+
+.header__nav__links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  padding: 4vw 7vw;
+}
+
+.about-us__content,
+.products__tabs {
+  display: flex;
+  gap: 30px;
+}
+
+.about-us img {
+  max-height: 700px;
+  border-radius: 5px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vw 7vw;
+}
+
+.products__tabs,
+.products__list {
+  padding-top: 50px;
+}
+
+.products__tabs__button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.products__tabs__button.is-active {
+  background-color: #686de0;
+}
+
+.products__list__items {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1%;
+}
+
+.products__list__items.active {
+  display: grid;
+  animation: showItem 0.5s forwards;
+}
+
+@keyframes showItem {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #130f40;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card:hover {
+  background-color: #f0efef;
+}
+
+.card img {
+  height: 350px;
+}
+
+.card button {
+  background-color: #eb4d4b;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 24px;
+}
+
+.card button:hover {
+  background-color: #e04947;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.price span {
+  font-size: 20px;
+  color: #eb4d4b;
+  font-weight: bold;
+}
